@@ -3,6 +3,7 @@ setwd('/users/home/dropbox/website/yu/ids3000-capstone/63spr18-ids3000-capstone/
 test <- read.csv("test.csv", stringsAsFactors = FALSE)
 train <- read.csv("train.csv", stringsAsFactors = FALSE)
 
+
 # s1 - a vector
 # s2 - a vector
 #
@@ -27,6 +28,8 @@ areColumnsInDf1SubsetsOfColsInDf2 <- function(df1, df2)  {
       )){
     stop("df1 and df2 must have the same column names")
   }
+  df1_uniques <- lapply(df, unique)
+  df2_uniques <- lapply(df2, unique)
   answer <- list()
   lapply(colnames(df1), 
     function(colname){
