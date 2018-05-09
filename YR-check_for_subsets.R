@@ -28,7 +28,7 @@ areColumnsInDf1SubsetsOfColsInDf2 <- function(df1, df2)  {
       )){
     stop("df1 and df2 must have the same column names")
   }
-  df1_uniques <- lapply(df, unique)
+  df1_uniques <- lapply(df1, unique)
   df2_uniques <- lapply(df2, unique)
   answer <- list()
   lapply(colnames(df1), 
